@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Kind - Anti Bullying Campaign</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: #333;
+            margin-top: 100px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 5px 5px 15px #d1d1d1,
+                        -5px -5px 15px #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: .3s;
+        }
+        button:hover {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            box-shadow: 4px 4px 10px #d1d1d1,
+                        -4px -4px 10px #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>كن لطيفًا - حملة ضد التنمر</h1>
+    <p>انضم إلينا في محاربة التنمر، ولنجعل كل طفل يشعر بالأمان والراحة.</p>
+    <button>كن داعمًا</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+
+        gsap.from("h1", {
+            duration: 2,
+            y: -50,
+            opacity: 0,
+            ease: "bounce"
+        });
+    </script>
+</body>
+</html>
